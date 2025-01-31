@@ -49,11 +49,11 @@ export default function CartModal() {
 
   return (
     <>
-      <button aria-label="Open cart" onClick={openCart}>
-        <OpenCart quantity={cart?.totalQuantity} />
+      <button aria-label="Open cart" className='border-none' onClick={openCart}>
+        <OpenCart quantity={cart?.totalQuantity} className='text-white fill-white'/>
       </button>
       <Transition show={isOpen}>
-        <Dialog onClose={closeCart} className="relative z-50">
+        <Dialog onClose={closeCart} className="relative z-[99999]">
           <Transition.Child
             as={Fragment}
             enter="transition-all ease-in-out duration-300"
